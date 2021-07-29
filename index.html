@@ -27,7 +27,7 @@
     </form>
   </section>
   <section>
-    <h2>Calcula perímetro del tríangulo</h2>
+    <h2>Calcula perímetro de tríangulo isósceles o la altura</h2>
     <form action="">
       <label>Ingresa la informácion que se le solicita:</label>
       <input type="number" id="inputTrianguloA" placeholder="Lado A">
@@ -36,10 +36,19 @@
       <button id="perimetro-triangulo" onclick="calcularPerimetroTriangulo()">
         Calcular el perímetro
       </button>
+      <button id="altura-triangulo" onclick="calcularAlturaTriangulo()">
+        Calcular altura
+      </button>
     </form>
-    <h2>Calcula área del tríangulo</h2>
+    <h2>Calcula el área y perímetro del tríangulo equilatero</h2>
     <form action="">
       <label>Ingresa la información solicitada:</label>
+      <input type="number" id="inputTrianguloLados" placeholder="Lados">
+      <button id="area-triangulo-equilatero" onclick="calcularPerimetroTrianguloEquilatero()">
+        Calcular el perímetro
+      </button>
+      <br>
+      <br>
       <input type="number" id="inputTrianguloBase" placeholder="Base">
       <input type="number" id="inputTrianguloH" placeholder="Altura">
       <button id="area-triangulo" onclick="calcularAreaTriangulo()">

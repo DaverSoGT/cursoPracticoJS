@@ -21,9 +21,13 @@ perimetroTriangulo = (a, b, c) => a + b + c
 
 areaTriangulo = (base, altura) => (base * altura) / 2
 
+alturaTrianguloIsosceles = (a, b) => Math.sqrt((Math.pow(a, 2))-((Math.pow(b, 2)/4)))
+
 perimetroCirculo = (radio) =>  2 * PI * radio
 
 areaCirculo = (radio) => PI * Math.pow(radio, 2)
+
+perimetroTrianguloEquilatero = (lado) => lado + lado + lado
 
 // Interacción con el HTML
 function calcularAreaCuadrado() {
@@ -51,6 +55,26 @@ function calcularPerimetroTriangulo() {
   let valueC = parseFloat(inputC.value)
 
   let perimetro = perimetroTriangulo(valueA, valueB, valueC)
+  alert(`Su tríangulo tiene ${perimetro} unidades de perímetro.`)
+}
+
+function calcularAlturaTriangulo() {
+  let inputA = document.getElementById("inputTrianguloA")
+  let valueA = parseFloat(inputA.value)
+  let inputB = document.getElementById("inputTrianguloB")
+  let valueB = parseFloat(inputB.value)
+  let inputC = document.getElementById("inputTrianguloC")
+  let valueC = parseFloat(inputC.value)
+
+  let altura = alturaTrianguloIsosceles(valueA, valueB, valueC)
+  alert(`Su tríangulo tiene ${altura.toFixed(2)} unidades de altura.`)
+}
+
+function calcularPerimetroTrianguloEquilatero() {
+  let inputLados = document.getElementById("inputTrianguloLados")
+  let valueLados = parseFloat(inputLados.value)
+
+  let perimetro = perimetroTrianguloEquilatero(valueLados)
   alert(`Su tríangulo tiene ${perimetro} unidades de perímetro.`)
 }
 
